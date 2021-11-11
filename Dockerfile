@@ -1,15 +1,12 @@
 FROM golang:alpine as builder
 
-ENV GO111MODULE=on
+ENV GO111MODULE=off
 
 RUN apk update && apk add --no-cache git
 
 WORKDIR /app
 
-COPY go.mod ./
-COPY go.sum ./
-
-RUN go mod download
+RUN go get github.com/go-chi/chi
 
 COPY . . 
 

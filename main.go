@@ -69,7 +69,6 @@ func write(db sql.DB) {
 	}
 
 	fmt.Println("Added Device to Table")
-
 }
 
 func read(db sql.DB) {
@@ -90,5 +89,4 @@ func read(db sql.DB) {
 		}
 		fmt.Println(Name)
 	}
-
 }
